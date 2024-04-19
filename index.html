@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taaza Khabar News</title>
@@ -10,26 +11,45 @@
 
 <body>
     <nav class="nav-bar">
-        <div class="main-nav">
-            <a href="#">
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
                 <img src="./assets/logo.png" alt="Taaza Khabar logo">
             </a>
 
-            <div class="nev-links">
-                <ul>
-                    <li class="" hover-link nev-item>IPL</li>
-                    <li class="" hover-link nev-item>Finance</li>
-                    <li class="" hover-link nev-item>Politics</li>
+            <div class="nav-links " id="nav-links">
+                <ul class="nav-link flex" id="nav-links">
+                    <li class=" hover-link nav-item" id="politics" onclick="onNavClick('politics')">Politics</li>
+                    <li class=" hover-link nav-item" id="finance" onclick="onNavClick('finance')">Finance</li>
+                    <li class=" hover-link nav-item" id="technology" onclick="onNavClick('technology')">Technology
+                    </li>
                 </ul>
             </div>
 
-            <div class="search-bar">
-                <input type="text" class="news-input" placeholder="e.g. Science">
-                <button class="search-button">Search</button>
-
+            <div class="search-bar flex">
+                <input type="text" id="search-input" class="news-input" placeholder="e.g. Science" id="n">
+                <button id="search-button" class="search-button">Search</button>
             </div>
         </div>
     </nav>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+    </main>
+    <template id="template-news-cards">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title" class="news-title">This is the Title</h3>
+                <h6 id="news-source" class="news-source" id="news-source">End Gadget 07/05/2002</h6>
+                <p calss=" news-desc" id="news-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                    atque voluptatibus obcaecati
+                    maiores temporibus sit sint. Officiis sint perspiciatis cupiditate?</p>
+            </div>
+        </div>
+    </template>
 
     <script src="script.js"></script>
 </body>
